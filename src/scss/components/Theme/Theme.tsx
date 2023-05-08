@@ -4,14 +4,12 @@
 import { FC, PropsWithChildren } from 'react';
 
 export type ThemeProps = PropsWithChildren<{
-	background?: string;
 	className?: string;
 	primary?: string;
 	secondary?: string;
 }>;
 
 const Theme: FC<ThemeProps> = ({
-	background = 'inherit',
 	children,
 	className,
 	primary = 'inherit',
