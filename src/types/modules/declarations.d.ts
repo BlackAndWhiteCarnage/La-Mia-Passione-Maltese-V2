@@ -5,7 +5,7 @@ declare module '*.jpg' {
 	export default value;
 }
 
-declare module '*.scss';
+declare module '*.pdf';
 
 declare module '*.svg' {
 	import React = require('react');
@@ -20,5 +20,7 @@ interface CustomCSSProperties {
 }
 
 declare module 'react' {
+	declare module '*.scss';
+
 	export interface CSSProperties extends Partial<CustomCSSProperties> {}
 }
