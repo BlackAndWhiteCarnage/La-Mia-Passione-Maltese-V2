@@ -1,0 +1,10 @@
+@use 'scss/color';
+@use 'scss/font';
+@use 'scss/unit' as u;
+
+.button {
+  font-family: font.get(primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
