@@ -5,6 +5,11 @@
 @use 'scss/color';
 @use 'scss/font';
 
+:root {
+  --theme-color-background: #{color.get(black)};
+  --theme-color-primary: #{color.get(white)};
+}
+
 *,
 *::before,
 *::after {
