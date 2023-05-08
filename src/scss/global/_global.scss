@@ -6,8 +6,8 @@
 @use 'scss/font';
 
 :root {
-  --theme-color-background: #{color.get(black)};
-  --theme-color-primary: #{color.get(white)};
+  --theme-color-primary: #{color.get(black)};
+  --theme-color-secondary: #{color.get(white)};
 }
 
 *,
