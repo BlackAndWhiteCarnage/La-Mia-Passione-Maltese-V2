@@ -1,10 +1,38 @@
-@use 'scss/color';
 @use 'scss/font';
 @use 'scss/unit' as u;
 
 .button {
-  font-family: font.get(primary);
   background: none;
   border: none;
+  color: var(--theme-color-primary);
   cursor: pointer;
+  display: block;
+  font-family: font.get(primary);
+  overflow: hidden;
+  padding: u.rem-calc(4) u.rem-calc(8);
+  position: relative;
+  transition: 0.25s;
+  width: fit-content;
+
+  &::before {
+    background: var(--theme-color-primary);
+    content: '';
+    height: 100%;
+    left: -100%;
+    position: absolute;
+    top: 0;
+    transition: 0.25s;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: var(--theme-color-secondary);
+    transition: 0.25s 0.2s;
+
+    &::before {
+      left: 0;
+    }
+  }
 }
