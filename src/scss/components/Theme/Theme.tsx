@@ -20,7 +20,6 @@ const Theme: FC<ThemeProps> = ({
 	<div
 		className={className}
 		style={{
-			'--theme-color-background': background,
 			'--theme-color-primary': primary,
 			'--theme-color-secondary': secondary,
 		}}
