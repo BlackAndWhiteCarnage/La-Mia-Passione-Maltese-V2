@@ -8,11 +8,11 @@
   cursor: pointer;
   display: block;
   font-family: font.get(primary);
+  min-width: fit-content;
   overflow: hidden;
   padding: u.rem-calc(4) u.rem-calc(8);
   position: relative;
   transition: 0.25s;
-  width: fit-content;
 
   &::before {
     background: var(--theme-color-secondary);

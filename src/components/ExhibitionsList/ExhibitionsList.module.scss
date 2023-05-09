@@ -1,0 +1,19 @@
+@use 'scss/unit' as u;
+@use 'scss/breakpoint' as bp;
+
+.buttons {
+  display: flex;
+  gap: u.rem-calc(20);
+  margin-bottom: u.rem-calc(50);
+  overflow-x: auto;
+  width: 100%;
+
+  @include bp.down(md) {
+    margin-bottom: u.rem-calc(20);
+  }
+}
+
+.isActive {
+  background: var(--theme-color-secondary);
+  color: var(--theme-color-primary);
+}

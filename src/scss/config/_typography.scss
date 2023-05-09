@@ -31,7 +31,12 @@ $styles: (
     font-size: 42,
     md: (
       font-size: 24,
-      letter-spacing: 1.875rem,
+    ),
+  ),
+  list-item: (
+    font-size: 18,
+    md: (
+      font-size: 14,
     ),
   ),
 );
