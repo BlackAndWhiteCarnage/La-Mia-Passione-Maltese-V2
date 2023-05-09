@@ -2,6 +2,7 @@
  * External dependencies
  */
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 import classnames from 'classnames/bind';
 
 /**
@@ -26,9 +27,9 @@ const Title: FC<TitleProps> = ({ level = 1, title }) => {
 				{title.split(' ').map((word, index) => (
 					<div key={index} className={classes.word}>
 						{word.split('').map((letter, i) => (
-							<span key={i} className={classes.letter}>
+							<motion.span key={i} className={classes.letter}>
 								{letter}
-							</span>
+							</motion.span>
 						))}
 					</div>
 				))}
