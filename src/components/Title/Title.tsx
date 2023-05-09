@@ -9,6 +9,7 @@ import classnames from 'classnames/bind';
  * Internal dependencies
  */
 import { templateAnimation, letterAnimation } from '@/config';
+import { useIntersectionObserver } from '@/hooks';
 import classes from './Title.module.scss';
 
 const cx = classnames.bind(classes);
@@ -19,12 +20,15 @@ type TitleProps = {
 };
 
 const Title: FC<TitleProps> = ({ level = 1, title }) => {
+	const { element, controls } = useIntersectionObserver();
+
 	const H = level === 1 ? 'h1' : 'h2';
 
 	return (
 		<motion.div
+			ref={element}
 			variants={templateAnimation}
-			animate={controls as any}
+			animate={controls}
 			initial="hidden"
 		>
 			<H className={classes.title}>{title}</H>
@@ -33,7 +37,7 @@ const Title: FC<TitleProps> = ({ level = 1, title }) => {
 					<div key={index} className={classes.word}>
 						{word.split('').map((letter, i) => (
 							<motion.span
-								variant={letterAnimation}
+								variants={letterAnimation}
 								key={i}
 								className={classes.letter}
 							>
