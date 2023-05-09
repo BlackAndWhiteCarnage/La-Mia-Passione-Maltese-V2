@@ -29,77 +29,30 @@ export default {
 	],
 } satisfies Meta<typeof ExhibitionsList>;
 
+const exhibition = {
+	dogName: 'Piccolo Perla',
+	date: '08.11.2015',
+	location: 'Poznań',
+	exhibitionName: 'Międzynarodowa Wystawa Psów Rasowych',
+	arbiterName: 'Krystyna Opara',
+	grade: 'Bardzo dobra',
+	place: 4,
+};
+
 export const Default: StoryObj<typeof ExhibitionsList> = {
 	args: {
 		exhibitions: [
 			{
 				year: 2015,
-				data: [
-					{
-						dogName: 'Piccolo Perla',
-						date: '08.11.2015',
-						location: 'Poznań',
-						exhibitionName: 'Międzynarodowa Wystawa Psów Rasowych',
-						arbiterName: 'Krystyna Opara',
-						grade: 'Bardzo dobra',
-						place: 4,
-					},
-					{
-						dogName: 'Piccolo Perla',
-						date: '08.11.2015',
-						location: 'Poznań',
-						exhibitionName: 'Międzynarodowa Wystawa Psów Rasowych',
-						arbiterName: 'Krystyna Opara',
-						grade: 'Bardzo dobra',
-						place: 4,
-					},
-				],
+				data: new Array(2).fill(exhibition),
 			},
 			{
 				year: 2018,
-				data: [
-					{
-						dogName: 'Piccolo Perla',
-						date: '08.11.2018',
-						location: 'Poznań',
-						exhibitionName: 'Międzynarodowa Wystawa Psów Rasowych',
-						arbiterName: 'Krystyna Opara',
-						grade: 'Bardzo dobra',
-						place: 4,
-					},
-				],
+				data: new Array(3).fill(exhibition),
 			},
 			{
 				year: 2020,
-				data: [
-					{
-						dogName: 'Piccolo Perla',
-						date: '08.11.2018',
-						location: 'Poznań',
-						exhibitionName: 'Międzynarodowa Wystawa Psów Rasowych',
-						arbiterName: 'Krystyna Opara',
-						grade: 'Bardzo dobra',
-						place: 4,
-					},
-					{
-						dogName: 'Piccolo Perla',
-						date: '08.11.2018',
-						location: 'Poznań',
-						exhibitionName: 'Międzynarodowa Wystawa Psów Rasowych',
-						arbiterName: 'Krystyna Opara',
-						grade: 'Bardzo dobra',
-						place: 4,
-					},
-					{
-						dogName: 'Piccolo Perla',
-						date: '08.11.2018',
-						location: 'Poznań',
-						exhibitionName: 'Międzynarodowa Wystawa Psów Rasowych',
-						arbiterName: 'Krystyna Opara',
-						grade: 'Bardzo dobra',
-						place: 4,
-					},
-				],
+				data: new Array(6).fill(exhibition),
 			},
 		],
 	},
