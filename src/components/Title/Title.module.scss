@@ -1,0 +1,23 @@
+@use 'scss/unit' as u;
+
+.title {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splitTitle {
+  display: inline-flex;
+  width: 100%;
+  flex-wrap: wrap;
+  column-gap: u.rem-calc(30);
+  justify-content: space-evenly;
+  color: var(--theme-color-primary);
+}
+
+.word {
+  display: flex;
+  justify-content: center;
+  flex: auto;
+  gap: u.rem-calc(30);
+}
