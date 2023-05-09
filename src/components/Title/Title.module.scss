@@ -8,7 +8,7 @@
 
 .splitTitle {
   color: var(--theme-color-secondary);
-  column-gap: u.rem-calc(30);
+  column-gap: u.rem-calc(80);
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -18,6 +18,6 @@
 .word {
   display: flex;
   flex: auto;
-  gap: u.rem-calc(30);
-  justify-content: center;
+  gap: u.rem-calc(20);
+  justify-content: space-evenly;
 }

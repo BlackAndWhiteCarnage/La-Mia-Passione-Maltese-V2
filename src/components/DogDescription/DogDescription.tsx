@@ -2,6 +2,7 @@
  * External dependencies
  */
 import { FC } from 'react';
+import classnames from 'classnames/bind';
 
 /**
  * Internal dependencies
@@ -16,6 +17,8 @@ type DogDescriptionProps = {
 	title: string;
 };
 
+const cx = classnames.bind(classes);
+
 const DogDescription: FC<DogDescriptionProps> = ({
 	description,
 	image: { src, alt },
@@ -24,8 +27,10 @@ const DogDescription: FC<DogDescriptionProps> = ({
 	<div className={classes.wrapper}>
 		<Title title={title} level={2} />
 		<div className={classes.inner}>
-			<p className={classes.description}>{description}</p>
-			<img src={src} alt={alt} />
+			<p className={cx('description', 'is-style-p')}>{description}</p>
+			<div className={classes.imageWrap}>
+				<img src={src} alt={alt} className={classes.image} />
+			</div>
 		</div>
 	</div>
 );

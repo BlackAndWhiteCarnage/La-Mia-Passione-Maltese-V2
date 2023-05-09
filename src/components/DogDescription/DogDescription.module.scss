@@ -1,0 +1,36 @@
+@use 'scss/unit' as u;
+@use 'scss/breakpoint' as bp;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.inner {
+  align-items: center;
+  display: flex;
+
+  @include bp.down(sm) {
+    flex-direction: column-reverse;
+  }
+}
+
+.description {
+  color: var(--theme-color-secondary);
+  min-width: u.rem-calc(400);
+  width: 100%;
+
+  @include bp.down(sm) {
+    min-width: unset;
+  }
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+}

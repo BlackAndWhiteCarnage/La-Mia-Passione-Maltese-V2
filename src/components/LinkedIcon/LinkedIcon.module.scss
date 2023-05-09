@@ -15,8 +15,8 @@
   width: u.rem-calc(50);
 
   @include bp.down(sm) {
-    padding: u.rem-calc(6);
     height: u.rem-calc(35);
+    padding: u.rem-calc(6);
     width: u.rem-calc(35);
   }
 

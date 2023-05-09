@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { StoryObj, Meta } from '@storybook/react';
+import { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 /**
  * Internal dependencies
@@ -19,6 +19,18 @@ export default {
 			},
 		},
 	},
+	decorators: [
+		(Story: StoryFn) => (
+			<div
+				style={{
+					margin: 'auto',
+					maxWidth: '87.5rem',
+				}}
+			>
+				<Story />
+			</div>
+		),
+	],
 } satisfies Meta<typeof DogDescription>;
 
 export const Default: StoryObj<typeof DogDescription> = {
