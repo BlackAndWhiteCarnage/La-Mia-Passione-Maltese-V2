@@ -16,6 +16,13 @@ export default {
 			default: 'light',
 		},
 	},
+	argTypes: {
+		exhibitions: {
+			table: {
+				disable: true,
+			},
+		},
+	},
 	decorators: [
 		(Story: StoryFn) => (
 			<div
