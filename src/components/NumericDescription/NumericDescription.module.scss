@@ -1,0 +1,59 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/unit' as u;
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  @include bp.down(sm) {
+    flex-direction: column-reverse;
+  }
+}
+
+.is-even {
+  @include bp.up(sm) {
+    .description {
+      order: 2;
+      text-align: right;
+    }
+
+    .imageWrap {
+      order: 1;
+    }
+  }
+}
+
+.number {
+  color: var(--theme-color-secondary);
+  font-size: clamp(u.rem-calc(100), 30vw, u.rem-calc(400));
+  left: 50%;
+  opacity: 0.1;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+
+  @include bp.down(sm) {
+    left: 0;
+    transform: translateY(-80%);
+  }
+}
+
+.description {
+  color: var(--theme-color-secondary);
+  min-width: u.rem-calc(400);
+  width: 100%;
+
+  @include bp.down(sm) {
+    min-width: unset;
+  }
+}
+
+.imageWrap {
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+}
