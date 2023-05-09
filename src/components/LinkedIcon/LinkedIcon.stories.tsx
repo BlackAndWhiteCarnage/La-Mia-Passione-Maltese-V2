@@ -19,6 +19,11 @@ export default {
 			},
 		},
 	},
+	parameters: {
+		backgrounds: {
+			default: 'light',
+		},
+	},
 } satisfies Meta<typeof LinkedIcon>;
 
 export const Default: StoryObj<typeof LinkedIcon> = {

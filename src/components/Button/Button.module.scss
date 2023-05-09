@@ -4,7 +4,7 @@
 .button {
   background: none;
   border: none;
-  color: var(--theme-color-primary);
+  color: var(--theme-color-secondary);
   cursor: pointer;
   display: block;
   font-family: font.get(primary);
@@ -15,7 +15,7 @@
   width: fit-content;
 
   &::before {
-    background: var(--theme-color-primary);
+    background: var(--theme-color-secondary);
     content: '';
     height: 100%;
     left: -100%;
@@ -28,7 +28,7 @@
 
   &:hover,
   &:focus-visible {
-    color: var(--theme-color-secondary);
+    color: var(--theme-color-primary);
     transition: 0.25s 0.2s;
 
     &::before {

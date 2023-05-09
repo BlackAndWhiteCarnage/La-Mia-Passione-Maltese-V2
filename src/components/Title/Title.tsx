@@ -15,11 +15,12 @@ import classes from './Title.module.scss';
 const cx = classnames.bind(classes);
 
 type TitleProps = {
+	className?: string;
 	level?: 1 | 2;
 	title: string;
 };
 
-const Title: FC<TitleProps> = ({ level = 1, title }) => {
+const Title: FC<TitleProps> = ({ className, level = 1, title }) => {
 	const { element, controls } = useIntersectionObserver();
 
 	const H = level === 1 ? 'h1' : 'h2';
@@ -30,6 +31,7 @@ const Title: FC<TitleProps> = ({ level = 1, title }) => {
 			variants={templateAnimation}
 			animate={controls}
 			initial="hidden"
+			className={className}
 		>
 			<H className={classes.title}>{title}</H>
 			<div className={cx('splitTitle', 'is-style-h1')}>
