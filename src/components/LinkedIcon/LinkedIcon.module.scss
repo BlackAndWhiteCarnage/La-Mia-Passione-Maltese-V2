@@ -1,0 +1,31 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/unit' as u;
+
+.icon path {
+  fill: var(--theme-color-primary);
+  transition: 0.2s;
+}
+
+.wrapper {
+  background: var(--theme-color-secondary);
+  display: block;
+  height: u.rem-calc(50);
+  padding: u.rem-calc(10);
+  transition: 0.2s;
+  width: u.rem-calc(50);
+
+  @include bp.down(sm) {
+    padding: u.rem-calc(6);
+    height: u.rem-calc(35);
+    width: u.rem-calc(35);
+  }
+
+  &:hover {
+    background: var(--theme-color-primary);
+    transform: rotate(-6deg) scale(1.04);
+
+    .icon path {
+      fill: var(--theme-color-secondary);
+    }
+  }
+}
