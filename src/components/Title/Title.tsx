@@ -8,6 +8,7 @@ import classnames from 'classnames/bind';
 /**
  * Internal dependencies
  */
+import { templateAnimation, letterAnimation } from '@/config';
 import classes from './Title.module.scss';
 
 const cx = classnames.bind(classes);
@@ -21,20 +22,28 @@ const Title: FC<TitleProps> = ({ level = 1, title }) => {
 	const H = level === 1 ? 'h1' : 'h2';
 
 	return (
-		<div>
+		<motion.div
+			variants={templateAnimation}
+			animate={controls as any}
+			initial="hidden"
+		>
 			<H className={classes.title}>{title}</H>
 			<div className={cx('splitTitle', 'is-style-h1')}>
 				{title.split(' ').map((word, index) => (
 					<div key={index} className={classes.word}>
 						{word.split('').map((letter, i) => (
-							<motion.span key={i} className={classes.letter}>
+							<motion.span
+								variant={letterAnimation}
+								key={i}
+								className={classes.letter}
+							>
 								{letter}
 							</motion.span>
 						))}
 					</div>
 				))}
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
