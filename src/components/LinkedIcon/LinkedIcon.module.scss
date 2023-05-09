@@ -1,11 +1,6 @@
 @use 'scss/breakpoint' as bp;
 @use 'scss/unit' as u;
 
-.icon path {
-  fill: var(--theme-color-primary);
-  transition: 0.2s;
-}
-
 .wrapper {
   background: var(--theme-color-secondary);
   display: block;
@@ -21,11 +16,11 @@
   }
 
   &:hover {
-    background: var(--theme-color-primary);
     transform: rotate(-6deg) scale(1.04);
-
-    .icon path {
-      fill: var(--theme-color-secondary);
-    }
   }
+}
+
+.icon path {
+  fill: var(--theme-color-primary);
+  transition: 0.2s;
 }
