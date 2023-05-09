@@ -1,0 +1,51 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/unit' as u;
+
+.wrapper {
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.isActive {
+  opacity: 1;
+}
+
+.list {
+  counter-reset: list-counter;
+}
+
+.listItem {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: u.rem-calc(30) 0;
+  position: relative;
+  width: 100%;
+
+  @include bp.down(md) {
+    padding: u.rem-calc(20) 0;
+  }
+
+  &::after {
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    font-size: u.rem-calc(200);
+
+    @include bp.down(md) {
+      font-size: u.rem-calc(48);
+      position: absolute;
+      right: 0;
+      top: u.rem-calc(15);
+    }
+  }
+}
+
+.innerList {
+  list-style: none;
+}
+
+.innerListItem:not(:last-child) {
+  margin-bottom: u.rem-calc(10);
+}
