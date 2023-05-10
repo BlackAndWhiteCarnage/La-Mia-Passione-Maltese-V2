@@ -14,7 +14,7 @@ import classes from './PurchaseProcess.module.scss';
 const cx = classnames.bind(classes);
 
 const PurchaseProcess: FC = () => (
-	<SectionWrapper className={classes.wrapper}>
+	<SectionWrapper className={classes.wrapper} id="purchase-process">
 		{purchaseProcess.map(({ title, description, listItems }, index) => (
 			<div className={classes.step} key={index}>
 				<Title title={title} level={2} />

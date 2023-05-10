@@ -15,9 +15,12 @@ import {
 	Contact,
 	PurchaseProcess,
 } from '@/sections';
+import { Navigation } from '@/components';
+import { navigation } from '@/config';
 
 const Root: FC = () => (
-	<>
+	<div id="home-page">
+		<Navigation links={navigation} />
 		<Home />
 		<AboutUs />
 		<OurDogs />
@@ -25,7 +28,7 @@ const Root: FC = () => (
 		<PurchaseProcess />
 		<Faq />
 		<Contact />
-	</>
+	</div>
 );
 
 export default Root;

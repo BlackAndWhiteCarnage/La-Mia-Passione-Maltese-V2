@@ -1,0 +1,59 @@
+@use 'scss/unit' as u;
+@use 'scss/breakpoint' as bp;
+
+.hamburger {
+  border: none;
+  cursor: pointer;
+  height: u.rem-calc(50);
+  left: u.rem-calc(30);
+  mix-blend-mode: difference;
+  position: relative;
+  position: fixed;
+  top: u.rem-calc(30);
+  transition: 0.25s;
+  width: u.rem-calc(70);
+  z-index: 99999;
+
+  @include bp.down(sm) {
+    height: u.rem-calc(40);
+    left: u.rem-calc(15);
+    top: u.rem-calc(15);
+    width: u.rem-calc(60);
+  }
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  svg {
+    pointer-events: none;
+  }
+}
+
+.navigation {
+  padding: u.rem-calc(30);
+
+  @include bp.down(sm) {
+    padding: u.rem-calc(20);
+  }
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem-calc(20);
+
+  @include bp.down(sm) {
+    gap: u.rem-calc(10);
+  }
+}
+
+.button {
+  background: var(--theme-color-primary);
+  font-size: u.rem-calc(24);
+  z-index: 1;
+
+  @include bp.down(sm) {
+    font-size: u.rem-calc(20);
+  }
+}

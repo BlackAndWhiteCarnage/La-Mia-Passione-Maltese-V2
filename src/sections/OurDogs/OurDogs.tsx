@@ -11,7 +11,7 @@ import { SectionWrapper, DogDescription } from '@/components';
 import classes from './OurDogs.module.scss';
 
 const OurDogs: FC = () => (
-	<SectionWrapper>
+	<SectionWrapper id="our-dogs">
 		<div className={classes.wrapper}>
 			{ourDogs.map(({ image, description, title }, index) => (
 				<DogDescription

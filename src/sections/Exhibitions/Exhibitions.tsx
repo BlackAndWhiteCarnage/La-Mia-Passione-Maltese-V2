@@ -10,7 +10,7 @@ import { exhibitions } from '@/config';
 import { SectionWrapper, ExhibitionsList } from '@/components';
 
 const Exhibitions: FC = () => (
-	<SectionWrapper theme="light">
+	<SectionWrapper theme="light" id="exhibitions">
 		<ExhibitionsList exhibitions={exhibitions} />
 	</SectionWrapper>
 );
