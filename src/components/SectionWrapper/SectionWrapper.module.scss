@@ -7,6 +7,10 @@
   display: flex;
   justify-content: center;
   padding: u.rem-calc(200) 0;
+
+  @include bp.down(xs) {
+    padding: u.rem-calc(100) 0;
+  }
 }
 
 .content {
