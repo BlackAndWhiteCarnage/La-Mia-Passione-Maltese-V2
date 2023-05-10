@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { StoryObj } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 
 /**
  * Internal dependencies
@@ -11,7 +11,14 @@ import Accordion from '.';
 export default {
 	title: 'Components/Accordion',
 	component: Accordion,
-};
+	argTypes: {
+		items: {
+			table: {
+				disable: true,
+			},
+		},
+	},
+} satisfies Meta<typeof Accordion>;
 
 export const Default: StoryObj<typeof Accordion> = {
 	args: {
