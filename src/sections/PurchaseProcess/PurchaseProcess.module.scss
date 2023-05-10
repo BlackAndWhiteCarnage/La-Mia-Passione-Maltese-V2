@@ -12,10 +12,10 @@
   gap: u.rem-calc(20);
 
   &:not(:last-child) {
-    margin-bottom: u.rem-calc(100);
+    margin-bottom: u.rem-calc(130);
 
     @include bp.down(sm) {
-      margin-bottom: u.rem-calc(50);
+      margin-bottom: u.rem-calc(80);
     }
   }
 }
