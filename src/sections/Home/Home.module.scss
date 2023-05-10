@@ -1,0 +1,16 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.title {
+  z-index: 2;
+}
+
+.hero {
+  position: absolute;
+  z-index: 1;
+}
