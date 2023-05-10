@@ -34,12 +34,6 @@ $transition: 0.25s;
 }
 
 .isOpen {
-  padding-bottom: u.rem-calc(30);
-
-  @include bp.down(sm) {
-    padding-bottom: u.rem-calc(15);
-  }
-
   .labelButton {
     margin-bottom: u.rem-calc(20);
 
