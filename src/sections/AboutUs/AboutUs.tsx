@@ -8,20 +8,23 @@ import { FC } from 'react';
  */
 import { aboutUs } from '@/config';
 import { SectionWrapper, NumericDescription } from '@/components';
+import classes from './AboutUs.module.scss';
 
 const AboutUs: FC = () => (
 	<SectionWrapper>
-		{aboutUs.map(({ image, description }, index) => (
-			<NumericDescription
-				key={index}
-				description={description}
-				image={{
-					src: image,
-					alt: "Bacio D'Amore",
-				}}
-				number={index + 1}
-			/>
-		))}
+		<div className={classes.wrapper}>
+			{aboutUs.map(({ image, description }, index) => (
+				<NumericDescription
+					key={index}
+					description={description}
+					image={{
+						src: image,
+						alt: "Bacio D'Amore",
+					}}
+					number={index + 1}
+				/>
+			))}
+		</div>
 	</SectionWrapper>
 );
 
