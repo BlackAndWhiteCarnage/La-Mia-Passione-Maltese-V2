@@ -6,14 +6,14 @@ import { StoryObj, Meta } from '@storybook/react';
 /**
  * Internal dependencies
  */
-import { navigation } from '@/config';
+import { navigationLinks, contactLinks } from '@/config';
 import Navigation from '.';
 
 export default {
 	title: 'Components/Navigation',
 	component: Navigation,
 	argTypes: {
-		links: {
+		navigationLinks: {
 			table: {
 				disable: true,
 			},
@@ -28,6 +28,7 @@ export default {
 
 export const Default: StoryObj<typeof Navigation> = {
 	args: {
-		links: navigation,
+		navigationLinks,
+		contactLinks,
 	},
 };
