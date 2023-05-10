@@ -24,6 +24,7 @@ export default {
 		children: disable,
 		onToggle: disable,
 	},
+	excludeStories: ['DefaultProps'],
 } satisfies Meta<typeof AccordionItem>;
 
 const AccordionItemStory: ArgsStoryFn<
@@ -40,17 +41,19 @@ const AccordionItemStory: ArgsStoryFn<
 	);
 };
 
+export const DefaultProps = {
+	label: 'Jaki charakter będzie miał mój Maltańczyk?',
+	children: (
+		<p className="is-style-p-large">
+			Charakteru nie da się tak naprawdę określić, tak samo jak z dziećmi.
+			Wszystko zależy od wychowania. Pies w pełni fizycznie i emocjonalnie
+			rozwija się do drugiego roku życia. Mamy obecnie cztery pieski a
+			każdy to inny świat.
+		</p>
+	),
+};
+
 export const Default: StoryObj<typeof AccordionItem> = {
 	render: AccordionItemStory,
-	args: {
-		label: 'Jaki charakter będzie miał mój Maltańczyk?',
-		children: (
-			<p className="is-style-p-large">
-				Charakteru nie da się tak naprawdę określić, tak samo jak z
-				dziećmi. Wszystko zależy od wychowania. Pies w pełni fizycznie i
-				emocjonalnie rozwija się do drugiego roku życia. Mamy obecnie
-				cztery pieski a każdy to inny świat.
-			</p>
-		),
-	},
+	args: DefaultProps,
 };
