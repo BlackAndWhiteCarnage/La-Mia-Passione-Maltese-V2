@@ -4,9 +4,9 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: u.rem-calc(60);
+  gap: u.rem-calc(100);
 
   @include bp.down(sm) {
-    gap: u.rem-calc(20);
+    gap: u.rem-calc(60);
   }
 }
