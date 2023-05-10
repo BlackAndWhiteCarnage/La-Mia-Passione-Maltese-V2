@@ -25,6 +25,7 @@ const SectionWrapper: FC<SectionWrapperProps> = ({
 	<Theme
 		className={cx('wrapper', className)}
 		primary={theme === 'light' ? '#eeeeee' : '#090909'}
+		secondary={theme === 'light' ? '#090909' : '#eeeeee'}
 	>
 		<div className={classes.content}>{children}</div>
 	</Theme>

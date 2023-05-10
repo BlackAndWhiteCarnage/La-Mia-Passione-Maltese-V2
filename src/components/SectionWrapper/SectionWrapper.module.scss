@@ -4,7 +4,6 @@
 .wrapper {
   align-items: center;
   background: var(--theme-color-primary);
-  // min-height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -13,7 +12,9 @@
   margin: auto;
   max-width: u.rem-calc(1450);
   padding: u.rem-calc(60);
+  position: relative;
   width: 100%;
+  z-index: 1;
 
   @include bp.down(sm) {
     padding: u.rem-calc(30);
