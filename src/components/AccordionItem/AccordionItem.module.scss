@@ -1,0 +1,58 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/font';
+@use 'scss/unit' as u;
+
+$transition: 0.25s;
+
+.labelButton {
+  background: var(--theme-color-primary);
+  border: none;
+  color: var(--theme-color-secondary);
+  cursor: pointer;
+  font-family: font.get(primary);
+  font-weight: 700;
+  position: relative;
+  text-align: left;
+  transition: $transition;
+  width: 100%;
+
+  &::before {
+    background: var(--theme-color-secondary);
+    bottom: 0;
+    content: '';
+    height: u.rem-calc(2);
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.content {
+  color: var(--theme-color-secondary);
+  opacity: 0;
+  transition: $transition;
+}
+
+.isOpen {
+  .labelButton {
+    margin-bottom: u.rem-calc(20);
+
+    @include bp.down(sm) {
+      margin-bottom: u.rem-calc(15);
+    }
+  }
+
+  .content {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  background: var(--theme-color-background);
+  overflow: hidden;
+  transition: $transition;
+
+  &:not(.isOpen) .content {
+    height: 0 !important;
+  }
+}
