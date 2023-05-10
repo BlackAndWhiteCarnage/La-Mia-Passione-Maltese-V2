@@ -1,0 +1,36 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/unit' as u;
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.step {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: u.rem-calc(20);
+
+  &:not(:last-child) {
+    margin-bottom: u.rem-calc(100);
+
+    @include bp.down(sm) {
+      margin-bottom: u.rem-calc(50);
+    }
+  }
+}
+
+.description {
+  color: var(--theme-color-secondary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem-calc(10);
+  padding-left: u.rem-calc(30);
+}
+
+.listItem {
+  color: var(--theme-color-secondary);
+}
