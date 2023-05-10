@@ -1,17 +1,21 @@
-@use 'scss/color';
 @use 'scss/unit' as u;
+@use 'scss/breakpoint' as bp;
 
 .wrapper {
   display: flex;
   flex-direction: column;
   gap: u.rem-calc(30);
   position: relative;
+
+  @include bp.down(sm) {
+    gap: u.rem-calc(15);
+  }
 }
 
 .submitFeedback {
   align-items: center;
   background: var(--theme-color-secondary);
-  color: color.get(gray-2);
+  color: var(--theme-color-primary);
   display: flex;
   height: 100%;
   justify-content: center;
