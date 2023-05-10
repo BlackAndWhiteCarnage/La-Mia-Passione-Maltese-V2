@@ -6,13 +6,13 @@
   display: flex;
   position: relative;
 
-  @include bp.down(sm) {
+  @include bp.down(md) {
     flex-direction: column-reverse;
   }
 }
 
 .is-even {
-  @include bp.up(sm) {
+  @include bp.up(md) {
     .description {
       order: 2;
       text-align: right;
@@ -33,7 +33,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
-  @include bp.down(sm) {
+  @include bp.down(md) {
     left: 0;
     transform: translateY(-80%);
   }
@@ -44,7 +44,7 @@
   min-width: u.rem-calc(400);
   width: 100%;
 
-  @include bp.down(sm) {
+  @include bp.down(md) {
     min-width: unset;
   }
 }
