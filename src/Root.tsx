@@ -6,7 +6,7 @@ import { FC } from 'react';
 /**
  * Internal dependencies
  */
-import { Home, AboutUs, OurDogs, Exhibitions } from '@/sections';
+import { Home, AboutUs, OurDogs, Exhibitions, Faq } from '@/sections';
 
 const Root: FC = () => (
 	<>
@@ -14,6 +14,7 @@ const Root: FC = () => (
 		<AboutUs />
 		<OurDogs />
 		<Exhibitions />
+		<Faq />
 	</>
 );
 
