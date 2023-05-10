@@ -4,6 +4,10 @@
 .wrapper {
   background: var(--theme-color-primary);
   padding: 0 u.rem-calc(60);
+
+  @include bp.down(sm) {
+    padding: 0 u.rem-calc(30);
+  }
 }
 
 .content {
