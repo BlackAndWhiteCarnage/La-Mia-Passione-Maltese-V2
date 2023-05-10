@@ -14,4 +14,7 @@
   margin: auto;
   max-width: u.rem-calc(1600);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: u.rem-calc(200);
 }
