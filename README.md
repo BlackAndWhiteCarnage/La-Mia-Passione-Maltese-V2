@@ -3,7 +3,7 @@
 
 Live: https://lamiapassionemaltese.pl/
 <br />
-Storybook: la-mia-passione-maltese-storybook.netlify.app
+Storybook: https://la-mia-passione-maltese-storybook.netlify.app/
 
 <br />
 
