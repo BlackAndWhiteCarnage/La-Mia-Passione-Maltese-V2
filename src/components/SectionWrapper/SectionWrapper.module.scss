@@ -6,7 +6,8 @@
   background: var(--theme-color-primary);
   display: flex;
   justify-content: center;
-  padding: u.rem-calc(200) 0;
+  padding: u.rem-calc(300) 0 u.rem-calc(200);
+  position: relative;
 
   @include bp.down(xs) {
     padding: u.rem-calc(100) 0;
@@ -23,5 +24,26 @@
 
   @include bp.down(sm) {
     padding: u.rem-calc(30);
+  }
+}
+
+.title {
+  color: var(--theme-color-secondary);
+  font-size: clamp(u.rem-calc(55), 15vw, u.rem-calc(200));
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+
+  @include bp.down(sm) {
+    opacity: 0.2;
+  }
+
+  &.left {
+    left: u.rem-calc(10);
+  }
+
+  &.right {
+    right: u.rem-calc(10);
   }
 }

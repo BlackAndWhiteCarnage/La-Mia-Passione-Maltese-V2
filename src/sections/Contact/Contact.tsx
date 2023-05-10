@@ -10,7 +10,12 @@ import { SectionWrapper, ContactForm } from '@/components';
 import classes from './Contact.module.scss';
 
 const Contact: FC = () => (
-	<SectionWrapper className={classes.wrapper} id="contact">
+	<SectionWrapper
+		className={classes.wrapper}
+		id="contact"
+		title="Kontakt"
+		titlePosition="right"
+	>
 		<ContactForm />
 	</SectionWrapper>
 );

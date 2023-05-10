@@ -14,6 +14,8 @@ type SectionWrapperProps = PropsWithChildren<{
 	className?: string;
 	id?: string;
 	theme?: 'light' | 'dark';
+	title?: string;
+	titlePosition?: 'left' | 'right';
 }>;
 
 const cx = classnames.bind(classes);
@@ -23,12 +25,15 @@ const SectionWrapper: FC<SectionWrapperProps> = ({
 	className,
 	id,
 	theme = 'dark',
+	title,
+	titlePosition = 'left',
 }) => (
 	<Theme
 		className={cx('wrapper', className)}
 		primary={theme === 'light' ? '#eeeeee' : '#090909'}
 		secondary={theme === 'light' ? '#090909' : '#eeeeee'}
 	>
+		{title && <span className={cx('title', titlePosition)}>{title}</span>}
 		<div className={classes.content} id={id}>
 			{children}
 		</div>

@@ -11,7 +11,7 @@ import { SectionWrapper, NumericDescription } from '@/components';
 import classes from './AboutUs.module.scss';
 
 const AboutUs: FC = () => (
-	<SectionWrapper id="about-us">
+	<SectionWrapper id="about-us" title="O Hodowli">
 		<div className={classes.wrapper}>
 			{aboutUs.map(({ image, description }, index) => (
 				<NumericDescription
