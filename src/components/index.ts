@@ -1,3 +1,4 @@
+export { default as AccordionItem } from './AccordionItem';
 export { default as Button } from './Button';
 export { default as DogDescription } from './DogDescription';
 export { default as ExhibitionsList } from './ExhibitionsList';
