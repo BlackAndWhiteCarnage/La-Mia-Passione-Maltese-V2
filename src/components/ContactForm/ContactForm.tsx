@@ -3,6 +3,7 @@
  */
 import { FC, useState } from 'react';
 import { FormProvider, useForm, SubmitHandler } from 'react-hook-form';
+import { motion } from 'framer-motion';
 import classnames from 'classnames/bind';
 import emailjs from 'emailjs-com';
 
@@ -10,6 +11,8 @@ import emailjs from 'emailjs-com';
  * Internal dependencies
  */
 import { Button, FormField } from '@/components';
+import { scaleInAnimation, imageAnimation } from '@/config';
+import { useIntersectionObserver } from '@/hooks';
 import classes from './ContactForm.module.scss';
 
 const cx = classnames.bind(classes);
@@ -26,6 +29,8 @@ const ContactForm: FC = () => {
 	} | null>();
 
 	const methods = useForm<ContactFormFields>();
+
+	const { element, controls } = useIntersectionObserver();
 
 	const onSubmit: SubmitHandler<ContactFormFields> = (data) => {
 		emailjs
@@ -57,7 +62,11 @@ const ContactForm: FC = () => {
 
 	return (
 		<FormProvider {...methods}>
-			<form
+			<motion.form
+				ref={element}
+				variants={scaleInAnimation}
+				animate={controls}
+				initial="hidden"
 				className={classes.wrapper}
 				onSubmit={methods.handleSubmit(onSubmit)}
 			>
@@ -104,7 +113,7 @@ const ContactForm: FC = () => {
 				<Button type="submit" className={classes.button}>
 					Wyślij
 				</Button>
-			</form>
+			</motion.form>
 		</FormProvider>
 	);
 };
