@@ -42,7 +42,7 @@ export const scaleInAnimation = {
 	show: {
 		opacity: 1,
 		scale: 1,
-		transition: { duration: 0.15 },
+		transition: { duration: 0.35 },
 	},
 };
 
@@ -54,6 +54,6 @@ export const imageAnimation = {
 	show: {
 		opacity: 1,
 		scale: 1,
-		transition: { duration: 1 },
+		transition: { duration: 0.8 },
 	},
 };
