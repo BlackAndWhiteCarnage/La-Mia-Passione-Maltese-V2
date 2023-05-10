@@ -9,7 +9,7 @@ import { FC } from 'react';
 import { SectionWrapper, ContactForm } from '@/components';
 
 const Contact: FC = () => (
-	<SectionWrapper theme="light">
+	<SectionWrapper>
 		<ContactForm />
 	</SectionWrapper>
 );

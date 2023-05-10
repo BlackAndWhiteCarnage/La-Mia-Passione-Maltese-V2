@@ -10,7 +10,7 @@ import { faq } from '@/config';
 import { SectionWrapper, Accordion } from '@/components';
 
 const Faq: FC = () => (
-	<SectionWrapper>
+	<SectionWrapper theme="light">
 		<Accordion expanded={0} items={faq} />
 	</SectionWrapper>
 );
