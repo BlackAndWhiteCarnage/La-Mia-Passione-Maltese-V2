@@ -15,14 +15,17 @@ const cx = classnames.bind(classes);
 
 const PurchaseProcess: FC = () => (
 	<SectionWrapper className={classes.wrapper}>
-		{purchaseProcess.map(({ title, description, listItems }) => (
-			<div className={classes.step}>
+		{purchaseProcess.map(({ title, description, listItems }, index) => (
+			<div className={classes.step} key={index}>
 				<Title title={title} level={2} />
 				<p className={cx('description', 'is-style-p')}>{description}</p>
 				{listItems && (
 					<ol className={classes.list}>
-						{listItems.map((item) => (
-							<li className={cx('listItem', 'is-style-p-small')}>
+						{listItems.map((item, i) => (
+							<li
+								className={cx('listItem', 'is-style-p-small')}
+								key={i}
+							>
 								{item}
 							</li>
 						))}
