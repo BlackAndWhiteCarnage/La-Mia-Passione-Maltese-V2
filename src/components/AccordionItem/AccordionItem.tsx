@@ -8,8 +8,7 @@ import classnames from 'classnames/bind';
 /**
  * Internal dependencies
  */
-import { scaleInAnimation } from '@/config';
-import { useOnResizeCallback, useIntersectionObserver } from '@/hooks';
+import { useOnResizeCallback } from '@/hooks';
 import classes from './AccordionItem.module.scss';
 
 export type AccordionItemProps = PropsWithChildren<{
@@ -26,8 +25,6 @@ const AccordionItem: FC<AccordionItemProps> = ({
 	onToggle,
 	isOpen,
 }) => {
-	const { element, controls } = useIntersectionObserver();
-
 	const contentRef = useRef<HTMLParagraphElement>(null);
 
 	useOnResizeCallback(() => {
@@ -39,10 +36,6 @@ const AccordionItem: FC<AccordionItemProps> = ({
 
 	return (
 		<motion.div
-			ref={element}
-			variants={scaleInAnimation}
-			animate={controls}
-			initial="hidden"
 			className={cx('wrapper', {
 				isOpen,
 			})}
