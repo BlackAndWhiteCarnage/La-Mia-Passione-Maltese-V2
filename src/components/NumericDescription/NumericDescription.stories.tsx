@@ -6,7 +6,7 @@ import { StoryObj, Meta, StoryFn } from '@storybook/react';
 /**
  * Internal dependencies
  */
-import ExampleImage from '@/images/about-me-3.png';
+import ExampleImage from '@/images/about-us-3.png';
 import NumericDescription from '.';
 
 export default {
