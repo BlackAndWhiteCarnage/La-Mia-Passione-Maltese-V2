@@ -2,12 +2,12 @@
 @use 'scss/unit' as u;
 
 .icon path {
-  fill: var(--theme-color-secondary);
+  fill: var(--theme-color-primary);
   transition: 0.2s;
 }
 
 .wrapper {
-  background: var(--theme-color-primary);
+  background: var(--theme-color-secondary);
   display: block;
   height: u.rem-calc(50);
   padding: u.rem-calc(10);

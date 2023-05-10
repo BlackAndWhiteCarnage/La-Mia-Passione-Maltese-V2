@@ -16,11 +16,14 @@ import {
 	PurchaseProcess,
 } from '@/sections';
 import { Navigation } from '@/components';
-import { navigation } from '@/config';
+import { navigationLinks, contactLinks } from '@/config';
 
 const Root: FC = () => (
 	<div id="home-page">
-		<Navigation links={navigation} />
+		<Navigation
+			navigationLinks={navigationLinks}
+			contactLinks={contactLinks}
+		/>
 		<Home />
 		<AboutUs />
 		<OurDogs />
