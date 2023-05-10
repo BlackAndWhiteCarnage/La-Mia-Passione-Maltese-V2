@@ -1,0 +1,46 @@
+@use 'scss/color';
+@use 'scss/font';
+@use 'scss/unit' as u;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: var(--theme-color-secondary);
+  margin-bottom: u.rem-calc(10);
+}
+
+.error {
+  color: color.get(red);
+  font-weight: 700;
+}
+
+.field {
+  background: var(--theme-color-primary);
+  border: none;
+  border-bottom: u.rem-calc(2) solid var(--theme-color-secondary);
+  color: var(--theme-color-secondary);
+  font-family: font.get(primary);
+  margin-bottom: u.rem-calc(10);
+  outline: none;
+  padding: u.rem-calc(10);
+  transition: 0.25s;
+
+  &:focus {
+    background: var(--theme-color-secondary);
+    color: var(--theme-color-primary);
+  }
+}
+
+.textarea {
+  border: u.rem-calc(2) solid var(--theme-color-secondary);
+  min-height: u.rem-calc(150);
+  resize: none;
+}
