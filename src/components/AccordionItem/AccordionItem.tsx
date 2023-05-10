@@ -2,13 +2,13 @@
  * External dependencies
  */
 import { FC, PropsWithChildren, useRef } from 'react';
+import { motion } from 'framer-motion';
 import classnames from 'classnames/bind';
 
 /**
  * Internal dependencies
  */
 import { scaleInAnimation } from '@/config';
-import { motion } from 'framer-motion';
 import { useOnResizeCallback, useIntersectionObserver } from '@/hooks';
 import classes from './AccordionItem.module.scss';
 
