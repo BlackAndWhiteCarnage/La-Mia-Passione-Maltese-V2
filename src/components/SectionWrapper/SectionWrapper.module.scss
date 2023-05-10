@@ -1,0 +1,25 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/unit' as u;
+
+.wrapper {
+  align-items: center;
+  background: var(--theme-color-primary);
+  // min-height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  &:not(:last-child) {
+    margin-bottom: u.rem-calc(300);
+  }
+}
+
+.content {
+  margin: auto;
+  max-width: u.rem-calc(1450);
+  padding: u.rem-calc(60);
+  width: 100%;
+
+  @include bp.down(sm) {
+    padding: u.rem-calc(30);
+  }
+}

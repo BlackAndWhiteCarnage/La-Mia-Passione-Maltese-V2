@@ -7,11 +7,11 @@ import { FC } from 'react';
  * Internal dependencies
  */
 import { ourDogs } from '@/config';
-import { DogDescription } from '@/components';
+import { SectionWrapper, DogDescription } from '@/components';
 import classes from './OurDogs.module.scss';
 
 const OurDogs: FC = () => (
-	<div className={classes.wrapper}>
+	<SectionWrapper>
 		{ourDogs.map(({ image, description, title }, index) => (
 			<DogDescription
 				key={index}
@@ -23,7 +23,7 @@ const OurDogs: FC = () => (
 				}}
 			/>
 		))}
-	</div>
+	</SectionWrapper>
 );
 
 export default OurDogs;

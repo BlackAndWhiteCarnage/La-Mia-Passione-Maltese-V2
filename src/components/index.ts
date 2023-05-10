@@ -9,5 +9,6 @@ export { default as FormField } from './FormField';
 export { default as LinkedIcon } from './LinkedIcon';
 export { default as NumericDescription } from './NumericDescription';
 export { default as Portal } from './Portal';
+export { default as SectionWrapper } from './SectionWrapper';
 export { default as Theme } from './Theme';
 export { default as Title } from './Title';

@@ -1,12 +1,10 @@
 .wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
+  position: relative;
 }
 
 .title {
+  position: relative;
   z-index: 2;
 }
 

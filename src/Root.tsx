@@ -6,17 +6,15 @@ import { FC } from 'react';
 /**
  * Internal dependencies
  */
-import { Home, AboutUs, OurDogs } from '@/sections';
-import classes from './Root.module.scss';
+import { Home, AboutUs, OurDogs, Exhibitions } from '@/sections';
 
 const Root: FC = () => (
-	<div className={classes.wrapper}>
-		<div className={classes.content}>
-			<Home />
-			<AboutUs />
-			<OurDogs />
-		</div>
-	</div>
+	<>
+		<Home />
+		<AboutUs />
+		<OurDogs />
+		<Exhibitions />
+	</>
 );
 
 export default Root;

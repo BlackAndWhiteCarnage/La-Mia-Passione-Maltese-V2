@@ -7,11 +7,10 @@ import { FC } from 'react';
  * Internal dependencies
  */
 import { aboutUs } from '@/config';
-import { NumericDescription } from '@/components';
-import classes from './AboutUs.module.scss';
+import { SectionWrapper, NumericDescription } from '@/components';
 
 const AboutUs: FC = () => (
-	<div className={classes.wrapper}>
+	<SectionWrapper>
 		{aboutUs.map(({ image, description }, index) => (
 			<NumericDescription
 				key={index}
@@ -23,7 +22,7 @@ const AboutUs: FC = () => (
 				number={index + 1}
 			/>
 		))}
-	</div>
+	</SectionWrapper>
 );
 
 export default AboutUs;
